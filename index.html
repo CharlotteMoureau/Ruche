@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Je construis ma ruche</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="toolbar">
+      <button id="resetBtn">🔄 Réinitialiser</button>
+      <button id="captureBtn">📷 Capture d'écran</button>
+    </div>
+    <div id="container">
+      <aside id="sidebar">
+        <section class="category" data-category="eleves">
+          <h2>Visées &amp; effets pour les élèves</h2>
+          <div class="cards-container"></div>
+        </section>
+        <section class="category" data-category="conditionsE">
+          <h2>Conditions pour l'enseignant/intervenant</h2>
+          <div class="cards-container"></div>
+        </section>
+        <section class="category" data-category="recommandationsE">
+          <h2>Recommandations pour l'enseignant/intervenant</h2>
+          <div class="cards-container"></div>
+        </section>
+        <section class="category" data-category="ConditionsEquipe">
+          <h2>Conditions pour l'équipe éducative</h2>
+          <div class="cards-container"></div>
+        </section>
+        <section class="category" data-category="RecommandationEquipe">
+          <h2>Recommandation pour l'équipe éducative</h2>
+          <div class="cards-container"></div>
+        </section>
+      </aside>
+      <main>
+        <h1>Je construis ma ruche</h1>
+        <div id="board" class="board"></div>
+      </main>
+    </div>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

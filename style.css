@@ -1,0 +1,144 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .toolbar {
+    background: white;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+  }
+  #container {
+    flex: 1;
+    display: flex;
+    height: calc(100vh - 50px);
+  }
+  aside#sidebar {
+    width: 25%;
+    background: #fff;
+    border-right: 1px solid #ccc;
+    overflow-y: auto;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .category {
+    margin-bottom: 20px;
+  }
+  .category h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.1em;
+    border-bottom: 2px solid #999;
+    padding-bottom: 5px;
+  }
+  .cards-container {
+    min-height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  main {
+    flex: 1;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background: white;
+    position: relative;
+    overflow: hidden;
+  }
+  main h1 {
+    margin: 0 0 10px 0;
+    font-weight: 700;
+  }
+  .board {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 40px);
+    border: 2px dashed #aaa;
+    background: #fafafa;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .hex-card {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    cursor: grab;
+    user-select: none;
+    perspective: 1000px;
+    z-index: 10;
+  }
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
+  .hex-card.flipped .card-inner {
+    transform: rotateY(180deg);
+  }
+  .card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    /* Suppression cadre/ombre */
+    box-shadow: none;
+  }
+  .card-back {
+    transform: rotateY(180deg);
+  }
+  .hex-shape {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    pointer-events: none;
+  }
+  .hex-label {
+    dominant-baseline: middle;
+    text-anchor: middle;
+    fill: white;
+    font-size: 13px;
+    font-weight: 700;
+    pointer-events: none;
+    user-select: none;
+  }
+  .button-flip {
+    position: absolute;
+    bottom: -1.6em;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    border: none;
+    padding: 3px 8px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    user-select: none;
+  }
+  .cards-container .hex-card {
+    position: relative;
+    margin: 0;
+    left: auto !important;
+    top: auto !important;
+    cursor: grab;
+    z-index: auto !important;
+    width: 90px;
+    height: 90px;
+  }
+  .cards-container .card-inner {
+    transition: transform 0.6s;
+  }
+  .cards-container .hex-card.flipped .card-inner {
+    transform: rotateY(180deg);
+  }
+  
